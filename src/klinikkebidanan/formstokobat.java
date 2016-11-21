@@ -57,8 +57,8 @@ public class formstokobat extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Stok Obat");
+        jDesktopPane1.add(jLabel1);
         jLabel1.setBounds(160, 0, 110, 40);
-        jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -97,7 +97,7 @@ public class formstokobat extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(153, 255, 0));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 255));
 
         btkeluar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btkeluar.setText("Keluar");

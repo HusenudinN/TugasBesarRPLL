@@ -26,8 +26,8 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanel1" max="32767" attributes="0"/>
-          <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
           <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -93,7 +93,7 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="cc" red="ff" type="rgb"/>
+          <Color blue="ff" green="99" red="0" type="rgb"/>
         </Property>
       </Properties>
 
@@ -117,13 +117,13 @@
                       <Group type="102" attributes="0">
                           <Component id="txtno" min="-2" pref="128" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btcari" pref="75" max="32767" attributes="0"/>
+                          <Component id="btcari" max="32767" attributes="0"/>
                       </Group>
                       <Component id="txttlp" max="32767" attributes="0"/>
                       <Component id="txtpek" alignment="1" max="32767" attributes="0"/>
-                      <Component id="txtusia" alignment="1" pref="209" max="32767" attributes="0"/>
-                      <Component id="txtnama" alignment="1" pref="209" max="32767" attributes="0"/>
-                      <Component id="txtala" alignment="1" pref="209" max="32767" attributes="0"/>
+                      <Component id="txtusia" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtnama" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtala" alignment="1" max="32767" attributes="0"/>
                       <Component id="cmbsta" alignment="0" max="32767" attributes="0"/>
                       <Component id="rblaki" max="32767" attributes="0"/>
                   </Group>
@@ -268,6 +268,9 @@
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rblakiActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -289,7 +292,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bthapus" max="32767" attributes="0"/>
+                      <Component id="bthapus" pref="106" max="32767" attributes="0"/>
                       <Component id="btkeluar" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>

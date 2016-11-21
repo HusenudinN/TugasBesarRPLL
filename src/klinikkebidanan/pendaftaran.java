@@ -106,8 +106,10 @@ new Timer(1000, taskPerformer).start();
         jLabel1.setFont(new java.awt.Font("Traditional Arabic", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("PENDAFTARAN");
-        jLabel1.setBounds(120, 10, 170, 32);
-        jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.add(jLabel1);
+        jLabel1.setBounds(120, 10, 170, 26);
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel2.setText("No. Daftar");
 
@@ -290,7 +292,7 @@ new Timer(1000, taskPerformer).start();
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblwktu)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(

@@ -55,7 +55,8 @@ public class formlogin extends javax.swing.JFrame {
         setTitle("Poliklinik UIN SGD Bandung");
         setResizable(false);
 
-        jDesktopPane1.setBackground(new java.awt.Color(255, 102, 0));
+        jDesktopPane1.setBackground(new java.awt.Color(51, 153, 255));
+        jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Traditional Arabic", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,7 +64,7 @@ public class formlogin extends javax.swing.JFrame {
         jDesktopPane1.add(jLabel4);
         jLabel4.setBounds(140, 0, 140, 40);
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("User ID");
@@ -83,7 +84,7 @@ public class formlogin extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/administrator.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/doctor.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

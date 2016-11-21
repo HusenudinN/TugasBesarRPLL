@@ -54,6 +54,7 @@ int pilih;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Kalkulator");
+        setBackground(new java.awt.Color(0, 153, 255));
 
         bt7.setText("7");
         bt7.addActionListener(new java.awt.event.ActionListener() {

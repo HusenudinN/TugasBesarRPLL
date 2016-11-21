@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package poliklinik;
+package klinikkebidanan;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
@@ -45,13 +45,11 @@ public class formobat extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         txtkode = new javax.swing.JTextField();
         txtnama = new javax.swing.JTextField();
-        txtharga = new javax.swing.JTextField();
         txtstok = new javax.swing.JTextField();
         txtmin = new javax.swing.JTextField();
         txtsup = new javax.swing.JTextField();
@@ -73,8 +71,8 @@ public class formobat extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Traditional Arabic", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("DATA OBAT");
-        jLabel9.setBounds(90, 0, 156, 38);
-        jDesktopPane1.add(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.add(jLabel9);
+        jLabel9.setBounds(90, 0, 156, 32);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,7 +85,7 @@ public class formobat extends javax.swing.JFrame {
             .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 102));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel1.setText("Kode obat");
 
@@ -96,8 +94,6 @@ public class formobat extends javax.swing.JFrame {
         jLabel3.setText("Jenis");
 
         jLabel4.setText("Satuan");
-
-        jLabel5.setText("Harga");
 
         jLabel6.setText("Stok");
 
@@ -136,22 +132,18 @@ public class formobat extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel1)
-                                                .addGap(57, 57, 57))
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel2)
-                                                .addGap(54, 54, 54)))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                            .addComponent(jLabel1)
+                                            .addGap(57, 57, 57))
                                         .addGroup(jPanel2Layout.createSequentialGroup()
-                                            .addComponent(jLabel3)
-                                            .addGap(82, 82, 82)))
+                                            .addComponent(jLabel2)
+                                            .addGap(54, 54, 54)))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addGap(72, 72, 72)))
+                                        .addComponent(jLabel3)
+                                        .addGap(82, 82, 82)))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel5)
-                                    .addGap(77, 77, 77)))
+                                    .addComponent(jLabel4)
+                                    .addGap(72, 72, 72)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(85, 85, 85)))
@@ -163,22 +155,24 @@ public class formobat extends javax.swing.JFrame {
                         .addGap(68, 68, 68)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtkode)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btcari))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtsup, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                                .addComponent(txtmin, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtstok, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtnama, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtharga, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(cmbsat, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cmbjenis, javax.swing.GroupLayout.Alignment.LEADING, 0, 136, Short.MAX_VALUE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(33, 33, 33))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(txtkode)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btcari))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(cmbsat, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(cmbjenis, javax.swing.GroupLayout.Alignment.LEADING, 0, 136, Short.MAX_VALUE)
+                                        .addComponent(txtstok, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtmin, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addGap(0, 2, Short.MAX_VALUE)))
+                        .addGap(33, 33, 33))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtsup, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,26 +191,22 @@ public class formobat extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(cmbjenis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbsat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 24, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(cmbsat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(txtstok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtharga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtstok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(txtsup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtsup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         bttambah.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -346,11 +336,10 @@ setTombol(false);        // TODO add your handling code here:
 
     private void btsimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btsimpanActionPerformed
         // TODO add your handling code here:
-        String kode = txtkode.getText();
+String kode = txtkode.getText();
 String nama_obat = txtnama.getText();
 String jenis = (String)cmbjenis.getSelectedItem();
 String satuan = (String)cmbsat.getSelectedItem();
-String harga = txtharga.getText();
 String stok = txtstok.getText();
 String stokmin = txtmin.getText();
 String suplier = txtsup.getText();
@@ -358,24 +347,23 @@ String suplier = txtsup.getText();
 try
 {
 Class.forName("com.mysql.jdbc.Driver").newInstance();
-Connection koneksi = (Connection) DriverManager.getConnection(
-"jdbc:mysql://localhost:3306/poliklinik", "root", "");
-Statement statement = (Statement) koneksi.createStatement();
-String sql="insert into obat values('"+kode+"','"+nama_obat+"','"+jenis+"','"+satuan+"','"+harga+"','"+stok+"','"+stokmin+"','"+suplier+"')";
-int executeUpdate = statement.executeUpdate(sql);
-statement.close();
-JOptionPane.showMessageDialog(null, "Data berhasil dimasukkan..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
-aktif(true);
-txtkode.setText("");
-txtnama.setText("");
-cmbjenis.setSelectedItem("");
-cmbsat.setSelectedItem("");
-txtharga.setText("");
-txtstok.setText("");
-txtmin.setText("");
-txtsup.setText("");
+    try (Connection koneksi = (Connection) DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/poliklinik", "root", "")) {
+        Statement statement = (Statement) koneksi.createStatement();
+        String sql="insert into obat values('"+kode+"','"+nama_obat+"','"+jenis+"','"+satuan+"','"+stok+"','"+stokmin+"','"+suplier+"')";
+        int executeUpdate = statement.executeUpdate(sql);
+        statement.close();
+        JOptionPane.showMessageDialog(null, "Data berhasil dimasukkan..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
+        aktif(true);
+        txtkode.setText("");
+        txtnama.setText("");
+        cmbjenis.setSelectedItem("");
+        cmbsat.setSelectedItem("");
+        txtstok.setText("");
+        txtmin.setText("");
+        txtsup.setText("");
 //txtnpm.setFocusable(rootPaneCheckingEnabled);
-koneksi.close();
+    }
 }
 catch (     ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException | HeadlessException e)
 {
@@ -403,7 +391,6 @@ setTombol(false);
 txtnama.setText(rs.getString(2));
 cmbjenis.setSelectedItem(rs.getString(3));
 cmbsat.setSelectedItem(rs.getString(4));
-txtharga.setText(rs.getString(5));
 txtstok.setText(rs.getString(6));
 txtmin.setText(rs.getString(7));
 txtsup.setText(rs.getString(8));
@@ -429,7 +416,6 @@ JOptionPane.showMessageDialog(null, "Eror:"+e,"Gagal",JOptionPane.WARNING_MESSAG
 txtnama.setText("");
 cmbjenis.setSelectedItem("");
 cmbsat.setSelectedItem("");
-txtharga.setText("");
 txtstok.setText("");
 txtmin.setText("");
 txtsup.setText("");
@@ -441,7 +427,6 @@ txtsup.setText("");
 String nama_obat = txtnama.getText();
 String jenis = (String)cmbjenis.getSelectedItem();
 String satuan = (String)cmbsat.getSelectedItem();
-String harga = txtharga.getText();
 String stok = txtstok.getText();
 String stokmin = txtmin.getText();
 String suplier = txtsup.getText();
@@ -450,7 +435,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="UPDATE obat SET NAMA_OBAT='"+nama_obat+"',JENIS='"+jenis+"',SATUAN='"+satuan+"',HARGA='"+harga+"',STOK='"+stok+"',STOKMIN='"+stokmin+"',SUPLIER='"+suplier+"' WHERE kode LIKE '"+kode+"'";
+String sql="UPDATE obat SET NAMA_OBAT='"+nama_obat+"',JENIS='"+jenis+"',SATUAN='"+satuan+"',STOK='"+stok+"',STOKMIN='"+stokmin+"',SUPLIER='"+suplier+"' WHERE kode LIKE '"+kode+"'";
 statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil diedit..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
@@ -476,7 +461,6 @@ txtkode.setText("");
 txtnama.setText("");
 cmbjenis.setSelectedItem("");
 cmbsat.setSelectedItem("");
-txtharga.setText("");
 txtstok.setText("");
 txtmin.setText("");
 txtsup.setText("");
@@ -543,7 +527,6 @@ koneksi.close();
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -551,7 +534,6 @@ koneksi.close();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField txtharga;
     private javax.swing.JTextField txtkode;
     private javax.swing.JTextField txtmin;
     private javax.swing.JTextField txtnama;
@@ -563,7 +545,6 @@ koneksi.close();
         txtnama.setEditable(x);
       cmbjenis.setEnabled(x);
       cmbsat.setEnabled(x);
-      txtharga.setEditable(x);
       txtstok.setEditable(x);
       txtmin.setEditable(x);
       txtsup.setEditable(x);

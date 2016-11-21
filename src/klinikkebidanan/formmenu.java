@@ -105,31 +105,44 @@ new Timer(1000, taskPerformer).start();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Utama Poliklinik UIN SGD Bandung");
-        setResizable(false);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/poliklinikmenu1.png"))); // NOI18N
+        jLabel3.setAutoscrolls(true);
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel3.setFocusable(false);
+
+        jDesktopPane1.setBackground(new java.awt.Color(0, 153, 255));
+        jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jDesktopPane1.setDoubleBuffered(true);
+        jDesktopPane1.setFocusable(false);
+        jDesktopPane1.setInheritsPopupMenu(true);
+
+        jLabel1.setFont(new java.awt.Font("SimSun", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Tanggal : ");
         jDesktopPane1.add(jLabel1);
         jLabel1.setBounds(20, 10, 120, 29);
 
-        tgl.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tgl.setFont(new java.awt.Font("SimSun", 1, 20)); // NOI18N
         tgl.setForeground(new java.awt.Color(255, 255, 255));
         tgl.setText("Tanggal");
         jDesktopPane1.add(tgl);
-        tgl.setBounds(130, 10, 180, 30);
+        tgl.setBounds(130, 10, 260, 30);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 20)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("SimSun", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Jam : ");
+        jLabel2.setText("Pukul : ");
         jDesktopPane1.add(jLabel2);
-        jLabel2.setBounds(330, 10, 60, 30);
+        jLabel2.setBounds(400, 10, 90, 30);
 
-        lblwktu.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        lblwktu.setFont(new java.awt.Font("SimSun", 1, 20)); // NOI18N
         lblwktu.setForeground(new java.awt.Color(255, 255, 255));
         lblwktu.setText("Jam");
         jDesktopPane1.add(lblwktu);
-        lblwktu.setBounds(400, 0, 190, 50);
+        lblwktu.setBounds(490, 0, 190, 50);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Log Out");
@@ -139,7 +152,7 @@ new Timer(1000, taskPerformer).start();
             }
         });
         jDesktopPane1.add(jButton1);
-        jButton1.setBounds(1070, 13, 120, 30);
+        jButton1.setBounds(810, 10, 120, 30);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setText("Keluar");
@@ -149,12 +162,16 @@ new Timer(1000, taskPerformer).start();
             }
         });
         jDesktopPane1.add(jButton2);
-        jButton2.setBounds(1200, 13, 120, 30);
+        jButton2.setBounds(660, 10, 120, 30);
 
+        jMenuBar1.setBackground(new java.awt.Color(51, 153, 255));
+        jMenuBar1.setForeground(new java.awt.Color(0, 153, 255));
+
+        jMenu1.setBackground(new java.awt.Color(0, 153, 255));
         jMenu1.setText("Data Master");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/People.png"))); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\patient.png")); // NOI18N
         jMenuItem1.setText("Data Pasien");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +181,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/People.png"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\doctor2.png")); // NOI18N
         jMenuItem2.setText("Data Petugas");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,7 +191,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Retort.png"))); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\first_aid_kit.png")); // NOI18N
         jMenuItem3.setText("Data Obat");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +201,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Green pin.png"))); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\Folder_Blue_Doc_Icon_16.png")); // NOI18N
         jMenuItem4.setText("Data Tindakan");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +212,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jSeparator1);
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Person.png"))); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\Profile2.png")); // NOI18N
         jMenuItem5.setText("User");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,7 +226,7 @@ new Timer(1000, taskPerformer).start();
         jMenu8.setText("Pendaftaran ");
 
         jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Bookmark.png"))); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\feedback2.png")); // NOI18N
         jMenuItem6.setText("Pendaftaran Pemeriksaan");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,7 +240,7 @@ new Timer(1000, taskPerformer).start();
         jMenu9.setText("Stok Obat");
 
         jMenuItem15.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
-        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Text preview.png"))); // NOI18N
+        jMenuItem15.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\first_aid_kit.png")); // NOI18N
         jMenuItem15.setText("Stok Obat");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,7 +254,7 @@ new Timer(1000, taskPerformer).start();
         jMenu2.setText("Tindakan");
 
         jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Green pin.png"))); // NOI18N
+        jMenuItem7.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\Folder_Blue_Doc_Icon_16.png")); // NOI18N
         jMenuItem7.setText("Tindakan Pemeriksaan");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,7 +268,7 @@ new Timer(1000, taskPerformer).start();
         jMenu4.setText("Cetak Data");
 
         jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Print.png"))); // NOI18N
+        jMenuItem9.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\bubble_jet_printer.png")); // NOI18N
         jMenuItem9.setText("Cetak Pembayaran");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -261,7 +278,7 @@ new Timer(1000, taskPerformer).start();
         jMenu4.add(jMenuItem9);
 
         jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Print.png"))); // NOI18N
+        jMenuItem10.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\bubble_jet_printer.png")); // NOI18N
         jMenuItem10.setText("Cetak Tindakan");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,7 +292,7 @@ new Timer(1000, taskPerformer).start();
         jMenu5.setText("Laporan");
 
         jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Report.png"))); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\file2.png")); // NOI18N
         jMenuItem11.setText("Laporan Pembayaran");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,6 +302,7 @@ new Timer(1000, taskPerformer).start();
         jMenu5.add(jMenuItem11);
 
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem8.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\file2.png")); // NOI18N
         jMenuItem8.setText("Laporan Pemeriksaan");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,7 +316,7 @@ new Timer(1000, taskPerformer).start();
         jMenu6.setText("About");
 
         jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Male.png"))); // NOI18N
+        jMenuItem12.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\User_group_Icon_16.png")); // NOI18N
         jMenuItem12.setText("Tentang Programmer");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,15 +347,17 @@ new Timer(1000, taskPerformer).start();
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1359, Short.MAX_VALUE)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 967, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
         );
 
         pack();

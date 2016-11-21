@@ -66,8 +66,8 @@ public class user extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Traditional Arabic", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("DATA USER");
-        jLabel1.setBounds(100, 0, 148, 38);
-        jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.add(jLabel1);
+        jLabel1.setBounds(100, 0, 139, 32);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -82,7 +82,7 @@ public class user extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 0));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
 
         jLabel2.setText("Id");
 
