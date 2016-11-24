@@ -239,13 +239,18 @@
         <Component class="javax.swing.JComboBox" name="cmbsta">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="5">
                 <StringItem index="0" value="== PILIH STATUS =="/>
-                <StringItem index="1" value="MENIKAH"/>
-                <StringItem index="2" value="BELUM MENIKAH"/>
+                <StringItem index="1" value="BELUM MENIKAH"/>
+                <StringItem index="2" value="DUDA"/>
+                <StringItem index="3" value="JANDA"/>
+                <StringItem index="4" value="MENIKAH"/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbstaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btcari">
           <Properties>
@@ -261,10 +266,11 @@
         <Component class="javax.swing.JComboBox" name="rblaki">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="4">
                 <StringItem index="0" value="== PILIH JENIS KELAMIN =="/>
                 <StringItem index="1" value="LAKI-LAKI"/>
                 <StringItem index="2" value="PEREMPUAN"/>
+                <StringItem index="3" value="LAINNYA"/>
               </StringArray>
             </Property>
           </Properties>
@@ -292,7 +298,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="bthapus" pref="106" max="32767" attributes="0"/>
+                      <Component id="bthapus" max="32767" attributes="0"/>
                       <Component id="btkeluar" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>

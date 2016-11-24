@@ -113,7 +113,12 @@ public class pasien extends javax.swing.JFrame {
 
         jLabel9.setText("No Telepon");
 
-        cmbsta.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== PILIH STATUS ==", "MENIKAH", "BELUM MENIKAH" }));
+        cmbsta.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== PILIH STATUS ==", "BELUM MENIKAH", "DUDA", "JANDA", "MENIKAH" }));
+        cmbsta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbstaActionPerformed(evt);
+            }
+        });
 
         btcari.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btcari.setText("Cari");
@@ -123,7 +128,7 @@ public class pasien extends javax.swing.JFrame {
             }
         });
 
-        rblaki.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== PILIH JENIS KELAMIN ==", "LAKI-LAKI", "PEREMPUAN" }));
+        rblaki.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== PILIH JENIS KELAMIN ==", "LAKI-LAKI", "PEREMPUAN", "LAINNYA" }));
         rblaki.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rblakiActionPerformed(evt);
@@ -262,7 +267,7 @@ public class pasien extends javax.swing.JFrame {
                     .addComponent(btbatal, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bthapus, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                    .addComponent(bthapus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btkeluar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -463,6 +468,10 @@ koneksi.close();
     private void rblakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rblakiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rblakiActionPerformed
+
+    private void cmbstaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbstaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbstaActionPerformed
 
     /**
      * @param args the command line arguments
