@@ -113,7 +113,7 @@ new Timer(1000, taskPerformer).start();
 
         jLabel2.setText("No. Daftar");
 
-        jLabel3.setText("No Rekam Medik");
+        jLabel3.setText("No Rekam Medis");
 
         jLabel4.setText("Nama Pasien");
 
@@ -142,7 +142,7 @@ new Timer(1000, taskPerformer).start();
             }
         });
 
-        cmbpem.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== :::: PILIH TINDAKAN ::::==", "KB", "IMUNISASI", "PERIKSA KEHAMILAN", "PERSALINAN ", "PEMERIKSAAN ANAK" }));
+        cmbpem.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== :::: PILIH TINDAKAN ::::==", "BEROBAT", "PERIKSA GULA DARAH", "PERIKSA TENSI", "TES KESEHATAN KEGIATAN OSPEK", "MENGUKUR BERAT BADAN", "MENGUKUR TINGGI BADAN" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

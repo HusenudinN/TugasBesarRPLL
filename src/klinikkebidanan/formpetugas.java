@@ -265,7 +265,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="insert into bidan values('"+nip+"','"+nama+"','"+alamat+"','"+no_tlp+"')";
+String sql="insert into dokter values('"+nip+"','"+nama+"','"+alamat+"','"+no_tlp+"')";
 int executeUpdate = statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil dimasukkan..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
@@ -303,7 +303,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="SELECT * FROM bidan WHERE nip like '"+nip+"'";
+String sql="SELECT * FROM dokter WHERE nip like '"+nip+"'";
  ResultSet rs = statement.executeQuery(sql);
 if (rs.next())
 {
@@ -347,7 +347,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="UPDATE bidan SET NAMA='"+nama+"',ALAMAT='"+alamat+"',NO_TELP='"+no_telp+"' WHERE nip LIKE '"+nip+"'";
+String sql="UPDATE dokter SET NAMA='"+nama+"',ALAMAT='"+alamat+"',NO_TELP='"+no_telp+"' WHERE nip LIKE '"+nip+"'";
 statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil diedit..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
@@ -366,7 +366,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="DELETE FROM bidan WHERE nip LIKE '"+nip+"'";
+String sql="DELETE FROM dokter WHERE nip LIKE '"+nip+"'";
 statement.executeUpdate(sql);
 statement.close();
 txtid.setText("");

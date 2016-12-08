@@ -236,7 +236,6 @@ setTombol(false);         // TODO add your handling code here:
         // TODO add your handling code here:
         String kd_tin = txtkode.getText();
 String nama_tin= txtnama.getText();
-String harga = txtharga.getText();
 {
 try
 {
@@ -244,14 +243,13 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="insert into tindakan values('"+kd_tin+"','"+nama_tin+"','"+harga+"')";
+String sql="insert into tindakan values('"+kd_tin+"','"+nama_tin+"')";
 int executeUpdate = statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil dimasukkan..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
 aktif(true);
 txtkode.setText("");
 txtnama.setText("");
-txtharga.setText("");
 koneksi.close();
 }
 catch (     ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException | HeadlessException e)
@@ -278,7 +276,6 @@ if (rs.next())
 aktif(true);
 setTombol(false);
 txtnama.setText(rs.getString(2));
-txtharga.setText(rs.getString(3));
 
 JOptionPane.showMessageDialog(null, "Data ditemukan","Insert Data",JOptionPane.INFORMATION_MESSAGE);
 }
@@ -300,20 +297,18 @@ JOptionPane.showMessageDialog(null, "Eror:"+e,"Gagal",JOptionPane.WARNING_MESSAG
         // TODO add your handling code here:
 txtkode.setText("");
 txtnama.setText("");
-txtharga.setText("");
     }//GEN-LAST:event_btbatalActionPerformed
 
     private void btubahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btubahActionPerformed
         // TODO add your handling code here:
         String kd_tin = txtkode.getText();
 String nama_tin = txtnama.getText();
-String harga = txtharga.getText();
 try {
 Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="UPDATE tindakan SET NAMA_TIN='"+nama_tin+"',HARGA='"+harga+"' WHERE kd_tin LIKE '"+kd_tin+"'";
+String sql="UPDATE tindakan SET NAMA_TIN='"+nama_tin+"' WHERE kd_tin LIKE '"+kd_tin+"'";
 statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil diedit..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
@@ -337,7 +332,6 @@ statement.executeUpdate(sql);
 statement.close();
 txtkode.setText("");
 txtnama.setText("");
-txtharga.setText("");
 JOptionPane.showMessageDialog(null, "Data berhasil dihapus..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
 koneksi.close();
 } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException | HeadlessException e) { JOptionPane.showMessageDialog(null, "Eror: "+e,"Gagal",JOptionPane.WARNING_MESSAGE);
@@ -407,7 +401,6 @@ koneksi.close();
 
     private void aktif(boolean x) {
       txtnama.setEditable(x);
-      txtharga.setEditable(x);
       txtkode.requestFocus();
     }
 

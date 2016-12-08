@@ -557,5 +557,5 @@ koneksi.close();
      bthapus.setEnabled(!t);
      btedit.setEnabled(!t);
      btbatal.setEnabled(!t);
-    }
+    }   
 }

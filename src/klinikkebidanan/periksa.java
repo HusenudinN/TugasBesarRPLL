@@ -466,7 +466,7 @@ new Timer(1000, taskPerformer).start();
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(255, 204, 102));
+        jPanel3.setBackground(new java.awt.Color(0, 153, 255));
 
         btsimpan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btsimpan.setText("Simpan");
@@ -497,23 +497,22 @@ new Timer(1000, taskPerformer).start();
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(112, Short.MAX_VALUE)
+                .addGap(71, 71, 71)
                 .addComponent(btsimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                 .addComponent(btbatal, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
+                .addGap(108, 108, 108)
                 .addComponent(btkeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                .addGap(58, 58, 58))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btkeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btsimpan, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                        .addComponent(btbatal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(btbatal, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btsimpan))
                 .addContainerGap())
         );
 
@@ -989,7 +988,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="SELECT * FROM bidan WHERE nip like '"+nip+"'";
+String sql="SELECT * FROM dokter WHERE nip like '"+nip+"'";
  ResultSet rs = statement.executeQuery(sql);
 if (rs.next())
 {
@@ -1019,7 +1018,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="UPDATE obat SET NAMA_OBAT='"+nama_obat+"',JENIS='"+jenis+"',SATUAN='"+satuan+"',HARGA='"+harga+"',STOK='"+stok+"',STOKMIN='"+stokmin+"',SUPLIER='"+suplier+"' WHERE kode LIKE '"+kode+"'";
+String sql="UPDATE obat SET NAMA_OBAT='"+nama_obat+"',JENIS='"+jenis+"',SATUAN='"+satuan+"',STOK='"+stok+"',STOKMIN='"+stokmin+"',SUPLIER='"+suplier+"' WHERE kode LIKE '"+kode+"'";
 statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil diedit..","Insert Data",JOptionPane.INFORMATION_MESSAGE);

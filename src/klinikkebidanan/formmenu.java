@@ -213,7 +213,7 @@ new Timer(1000, taskPerformer).start();
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem5.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\Profile2.png")); // NOI18N
-        jMenuItem5.setText("User");
+        jMenuItem5.setText("Administrator");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);

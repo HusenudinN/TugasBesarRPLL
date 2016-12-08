@@ -177,7 +177,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="No Rekam Medik"/>
+            <Property name="text" type="java.lang.String" value="No Rekam Medis"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -228,13 +228,14 @@
         <Component class="javax.swing.JComboBox" name="cmbpem">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
+              <StringArray count="7">
                 <StringItem index="0" value="== :::: PILIH TINDAKAN ::::=="/>
-                <StringItem index="1" value="KB"/>
-                <StringItem index="2" value="IMUNISASI"/>
-                <StringItem index="3" value="PERIKSA KEHAMILAN"/>
-                <StringItem index="4" value="PERSALINAN "/>
-                <StringItem index="5" value="PEMERIKSAAN ANAK"/>
+                <StringItem index="1" value="BEROBAT"/>
+                <StringItem index="2" value="PERIKSA GULA DARAH"/>
+                <StringItem index="3" value="PERIKSA TENSI"/>
+                <StringItem index="4" value="TES KESEHATAN KEGIATAN OSPEK"/>
+                <StringItem index="5" value="MENGUKUR BERAT BADAN"/>
+                <StringItem index="6" value="MENGUKUR TINGGI BADAN"/>
               </StringArray>
             </Property>
           </Properties>

@@ -10,7 +10,10 @@ import java.awt.HeadlessException;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  *
@@ -21,6 +24,7 @@ public class pasien extends javax.swing.JFrame {
     /**
      * Creates new form pasien
      */
+    String JK;
     public pasien() {
         initComponents();
         setLocationRelativeTo(this);
@@ -37,6 +41,7 @@ public class pasien extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jenis_klm = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
@@ -57,7 +62,8 @@ public class pasien extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         cmbsta = new javax.swing.JComboBox();
         btcari = new javax.swing.JButton();
-        rblaki = new javax.swing.JComboBox();
+        rblaki = new javax.swing.JRadioButton();
+        rbpr = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
         bttambah = new javax.swing.JButton();
         btbatal = new javax.swing.JButton();
@@ -76,7 +82,7 @@ public class pasien extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("DATA PASIEN");
         jDesktopPane1.add(jLabel1);
-        jLabel1.setBounds(110, 10, 130, 26);
+        jLabel1.setBounds(160, 10, 130, 26);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -111,6 +117,12 @@ public class pasien extends javax.swing.JFrame {
             }
         });
 
+        txttlp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttlpActionPerformed(evt);
+            }
+        });
+
         jLabel9.setText("No Telepon");
 
         cmbsta.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== PILIH STATUS ==", "BELUM MENIKAH", "DUDA", "JANDA", "MENIKAH" }));
@@ -128,10 +140,19 @@ public class pasien extends javax.swing.JFrame {
             }
         });
 
-        rblaki.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "== PILIH JENIS KELAMIN ==", "LAKI-LAKI", "PEREMPUAN", "LAINNYA" }));
+        jenis_klm.add(rblaki);
+        rblaki.setText("Laki-Laki");
         rblaki.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rblakiActionPerformed(evt);
+            }
+        });
+
+        jenis_klm.add(rbpr);
+        rbpr.setText("Perempuan");
+        rbpr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbprActionPerformed(evt);
             }
         });
 
@@ -146,23 +167,27 @@ public class pasien extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel7)
                     .addComponent(jLabel8)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel9))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel7)
+                        .addComponent(jLabel9)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtno, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btcari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(rblaki, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rbpr, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtno)
+                        .addGap(18, 18, 18)
+                        .addComponent(btcari, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txttlp)
                     .addComponent(txtpek, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtusia, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtnama, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtala, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cmbsta, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rblaki, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cmbsta, 0, 277, Short.MAX_VALUE))
                 .addGap(32, 32, 32))
         );
         jPanel2Layout.setVerticalGroup(
@@ -184,24 +209,25 @@ public class pasien extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(rblaki, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(rbpr)
+                    .addComponent(rblaki))
+                .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(cmbsta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtpek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(16, 16, 16)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(txtala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txttlp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel9)
+                    .addComponent(txttlp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         bttambah.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -258,16 +284,16 @@ public class pasien extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(bttambah, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bttambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btsimpan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btedit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btbatal, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bthapus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btbatal, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btedit, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bthapus, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
                     .addComponent(btkeluar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -276,14 +302,16 @@ public class pasien extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(bthapus, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(btbatal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(bthapus, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                        .addComponent(btbatal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(bttambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btedit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(btsimpan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btkeluar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(btsimpan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btkeluar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btedit, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -299,10 +327,10 @@ public class pasien extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -326,7 +354,7 @@ setTombol(false);// TODO add your handling code here:
 String no_rm = txtno.getText();
 String nama = txtnama.getText();
 String usia = txtusia.getText();
-String jenis_kel = (String) rblaki.getSelectedItem();
+String jenis_klm = JK;
 String status = (String)cmbsta.getSelectedItem();
 String pekerjaan = txtpek.getText();
 String alamat = txtala.getText();
@@ -338,7 +366,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="insert into pasien values('"+no_rm+"','"+nama+"','"+usia+"','"+jenis_kel+"','"+status+"','"+pekerjaan+"','"+alamat+"','"+no_tlp+"')";
+String sql="insert into pasien values('"+no_rm+"','"+nama+"','"+usia+"','"+jenis_klm+"','"+status+"','"+pekerjaan+"','"+alamat+"','"+no_tlp+"')";
 int executeUpdate = statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil dimasukkan..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
@@ -346,8 +374,9 @@ aktif(true);
 txtno.setText("");
 txtnama.setText("");
 txtusia.setText("");
-rblaki.setSelectedItem("");
 cmbsta.setSelectedItem("");
+rblaki.setSelected(false);
+rbpr.setSelected(false);
 txtpek.setText("");
 txtala.setText("");
 txttlp.setText("");
@@ -379,7 +408,13 @@ aktif(true);
 setTombol(false);
 txtnama.setText(rs.getString(2));
 txtusia.setText(rs.getString(3));
-rblaki.setSelectedItem(rs.getString(4));
+if ("Laki-Laki".equals(rs.getString(4))) {
+                    rblaki.setSelected(true);
+                    JK="Laki-Laki";
+                } else {
+                    rbpr.setSelected(true);
+                    JK="Perempuan";
+                }
 cmbsta.setSelectedItem(rs.getString(5));
 txtpek.setText(rs.getString(6));
 txtala.setText(rs.getString(7));
@@ -405,7 +440,8 @@ JOptionPane.showMessageDialog(null, "Eror:"+e,"Gagal",JOptionPane.WARNING_MESSAG
         txtno.setText("");
         txtnama.setText("");
         txtusia.setText("");
-        rblaki.setSelectedItem("");
+        rbpr.setText("");
+        rblaki.setText("");
         cmbsta.setSelectedItem("");
         txtpek.setText("");
         txtala.setText("");
@@ -418,7 +454,6 @@ JOptionPane.showMessageDialog(null, "Eror:"+e,"Gagal",JOptionPane.WARNING_MESSAG
 String no_rm = txtno.getText();
 String nama = txtnama.getText();
 String usia = txtusia.getText();
-String jenis_kel = (String) rblaki.getSelectedItem();
 String status = (String) cmbsta.getSelectedItem();
 String pekerjaan = txtpek.getText();
 String alamat = txtala.getText();
@@ -428,7 +463,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="UPDATE pasien SET NAMA='"+nama+"',USIA='"+usia+"',JENIS_KEL='"+jenis_kel+"',STATUS='"+status+"',PEKERJAAN='"+pekerjaan+"',ALAMAT='"+alamat+"',NO_TLP='"+no_tlp+"' WHERE no_rm LIKE '"+no_rm+"'";
+String sql="UPDATE pasien SET NAMA='"+nama+"',USIA='"+usia+"',JENIS_KEL='"+JK+"',STATUS='"+status+"',PEKERJAAN='"+pekerjaan+"',ALAMAT='"+alamat+"',NO_TLP='"+no_tlp+"' WHERE no_rm LIKE '"+no_rm+"'";
 statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil diedit..","Informasi",JOptionPane.INFORMATION_MESSAGE);
@@ -453,7 +488,8 @@ statement.close();
 txtno.setText("");
 txtnama.setText("");
 txtusia.setText("");
-rblaki.setSelectedItem("0");
+rblaki.setText("");
+rbpr.setText("");
 cmbsta.setSelectedItem("0");
 txtpek.setText("");
 txtala.setText("");
@@ -465,13 +501,23 @@ koneksi.close();
 }
     }//GEN-LAST:event_bthapusActionPerformed
 
-    private void rblakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rblakiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rblakiActionPerformed
-
     private void cmbstaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbstaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbstaActionPerformed
+
+    private void txttlpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttlpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttlpActionPerformed
+
+    private void rblakiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rblakiActionPerformed
+            JK = "Laki-laki";
+        rbpr.setSelected(false);
+    }//GEN-LAST:event_rblakiActionPerformed
+
+    private void rbprActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbprActionPerformed
+         JK = "Perempuan";
+        rblaki.setSelected(false);
+    }//GEN-LAST:event_rbprActionPerformed
 
     /**
      * @param args the command line arguments
@@ -537,7 +583,9 @@ koneksi.close();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JComboBox rblaki;
+    private javax.swing.ButtonGroup jenis_klm;
+    private javax.swing.JRadioButton rblaki;
+    private javax.swing.JRadioButton rbpr;
     private javax.swing.JTextField txtala;
     private javax.swing.JTextField txtnama;
     private javax.swing.JTextField txtno;
@@ -550,6 +598,7 @@ koneksi.close();
       txtnama.setEditable(x);
       txtusia.setEditable(x);
       rblaki.setEnabled(x);
+      rbpr.setEnabled(x);
       cmbsta.setEnabled(x);
       txtpek.setEditable(x);
       txtala.setEditable(x);
@@ -564,4 +613,34 @@ koneksi.close();
      btedit.setEnabled(!t);
      btbatal.setEnabled(!t);
     }
+    public void AutoNumber() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection cn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/poliklinik", "root", "");
+            Statement sn = (Statement) cn.createStatement();
+            String sql = "SELECT * FROM pasien ORDER BY no_rm DESC";
+            ResultSet rs = sn.executeQuery(sql);
+            if (rs.next()) {
+                String no_rm = rs.getString("no_rm").substring(1);
+                String AN = "" + (Integer.parseInt(no_rm) + 1);
+                String Nol = "";
+
+                 if(AN.length()==1)
+                {Nol = "00";}
+                else if(AN.length()==2)
+                {Nol = "0";}
+                else if(AN.length()==4)
+                {Nol = "";}
+                txtno.setText("P" + Nol + AN);//sesuaikan dengan variable namenya
+            } else {
+                txtno.setText("P001");//sesuaikan dengan variable namenya
+            }
+            rs.close();
+            cn.close();
+        } catch (ClassNotFoundException e) {
+        } catch (SQLException e) {
+        } catch (NumberFormatException e) {
+        }
+    }
+        
 }
