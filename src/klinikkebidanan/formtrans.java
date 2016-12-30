@@ -123,9 +123,9 @@ new Timer(1000, taskPerformer).start();
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Transaksi Pembayaran");
+        jLabel2.setText("      Form Transaksi ");
         jDesktopPane2.add(jLabel2);
-        jLabel2.setBounds(140, 0, 354, 42);
+        jLabel2.setBounds(140, 0, 309, 42);
 
         jLabel4.setText("No Periksa");
 
@@ -368,11 +368,9 @@ new Timer(1000, taskPerformer).start();
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(117, Short.MAX_VALUE))))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -403,10 +401,9 @@ txtno_rm.setText(rs.getString(5));
 txtnama.setText(rs.getString(6));
 txttin.setText(rs.getString(7));
 txtobat.setText(rs.getString(15));
-txtbiaya.setText(rs.getString(16));
 
 JOptionPane.showMessageDialog(null, "Data ditemukan","Informasi",JOptionPane.INFORMATION_MESSAGE);
-txtbiaya.requestFocus();
+
 }
 else
 {
@@ -441,9 +438,7 @@ String nama = txtnama.getText();
 String kd_tin = txttin.getText();
 String kode = txtobat.getText();
 String id = (String) cmbid.getSelectedItem();
-String tot_bayar = txtbiaya.getText();
-String bayar = txtbayar.getText();
-String kembalian = txtkem.getText();
+
 {
 try
 {
@@ -451,7 +446,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 Connection koneksi = (Connection) DriverManager.getConnection(
 "jdbc:mysql://localhost:3306/poliklinik", "root", "");
 Statement statement = (Statement) koneksi.createStatement();
-String sql="insert into pembayaran values('"+no_trans+"','"+no_per+"','"+tanggal+"','"+jam+"','"+no_rm+"','"+nama+"','"+kd_tin+"','"+kode+"','"+id+"','"+tot_bayar+"','"+bayar+"','"+kembalian+"')";
+String sql="insert into pembayaran values('"+no_trans+"','"+no_per+"','"+tanggal+"','"+jam+"','"+no_rm+"','"+nama+"','"+kd_tin+"','"+kode+"','"+id+"')";
 int executeUpdate = statement.executeUpdate(sql);
 statement.close();
 JOptionPane.showMessageDialog(null, "Data berhasil dimasukkan..","Insert Data",JOptionPane.INFORMATION_MESSAGE);
@@ -461,9 +456,7 @@ txtno.setText("");
         txttin.setText(""); 
         txtadmin.setText("");       
         txtobat.setText("");
-        txtbayar.setText("");
-        txtbiaya.setText("");
-        txtkem.setText("");
+     
 koneksi.close();
 }
 catch (     ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException | HeadlessException e)
@@ -482,9 +475,7 @@ JOptionPane.showMessageDialog(null, "Eror: "+e,"Gagal",JOptionPane.WARNING_MESSA
         txttin.setText("");    
         txtadmin.setText("");       
         txtobat.setText("");
-        txtbayar.setText("");
-        txtbiaya.setText("");
-        txtkem.setText("");
+        
     }//GEN-LAST:event_btbatalActionPerformed
 
     private void cmbidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbidActionPerformed
@@ -505,7 +496,7 @@ txtadmin.setText(rs.getString(2));
 else {
 JOptionPane.showMessageDialog(null, "Data Tidak Ada");
 } } catch (Exception e){ }
-txtbayar.requestFocus();
+
     }//GEN-LAST:event_cmbidActionPerformed
 
     private void txtnotransActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnotransActionPerformed

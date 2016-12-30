@@ -26,7 +26,7 @@
                   <KeyStroke key="Alt+P"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\patient.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/patient.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Data Pasien"/>
               </Properties>
@@ -40,7 +40,7 @@
                   <KeyStroke key="Shift+P"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\doctor2.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/doctor2.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Data Petugas"/>
               </Properties>
@@ -54,7 +54,7 @@
                   <KeyStroke key="Alt+O"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\first_aid_kit.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/Retort.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Data Obat"/>
               </Properties>
@@ -68,7 +68,7 @@
                   <KeyStroke key="Alt+T"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\Folder_Blue_Doc_Icon_16.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/Folder_Blue_Doc_Icon_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Data Tindakan"/>
               </Properties>
@@ -84,7 +84,7 @@
                   <KeyStroke key="Alt+U"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\Profile2.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/Person.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Administrator"/>
               </Properties>
@@ -105,12 +105,26 @@
                   <KeyStroke key="Shift+Alt+P"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\feedback2.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/feedback2.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pendaftaran Pemeriksaan"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem6ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+INSERT"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/Folder_Blue_Doc_Icon_16.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Tampilkan Pendaftaran"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem20ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -126,12 +140,26 @@
                   <KeyStroke key="F2"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\first_aid_kit.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/Retort.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Stok Obat"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem15ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+LEFT"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/feedback2.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pengguna Obat"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem9ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -147,7 +175,7 @@
                   <KeyStroke key="Shift+T"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\Folder_Blue_Doc_Icon_16.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/Text preview.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Tindakan Pemeriksaan"/>
               </Properties>
@@ -162,27 +190,13 @@
             <Property name="text" type="java.lang.String" value="Cetak Data"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Alt+C"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\bubble_jet_printer.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Cetak Pembayaran"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem9ActionPerformed"/>
-              </Events>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Shift+Alt+T"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\bubble_jet_printer.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/bubble_jet_printer.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cetak Tindakan"/>
               </Properties>
@@ -197,32 +211,32 @@
             <Property name="text" type="java.lang.String" value="Laporan"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Alt+L"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\file2.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Laporan Pembayaran"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem11ActionPerformed"/>
-              </Events>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+Alt+P"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\file2.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/Print.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Laporan Pemeriksaan"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem8ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+P"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/Bookmark.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Daftar Pemeriksaan"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem11ActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -238,13 +252,84 @@
                   <KeyStroke key="Ctrl+Alt+A"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Univ\Sms_5\RPL Lanjut\Poliklinik UIN SGD\RumahBersalin1\RumahBersalin\klinikkebidanan\src\klinikkebidanan\User_group_Icon_16.png"/>
+                  <Image iconType="3" name="/klinikkebidanan/User_group_Icon_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Tentang Programmer"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem12ActionPerformed"/>
               </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Riwayat"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+A"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/Profile2.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Login Admin"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem14ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+S"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/Profile2.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Data Admin"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem16ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+B"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/Retort.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Update Obat"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+D"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/Retort.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Hapus Obat"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem18ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem19">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+H"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/klinikkebidanan/Male.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Hapus Pasien"/>
+              </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>

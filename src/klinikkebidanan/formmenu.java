@@ -88,18 +88,25 @@ new Timer(1000, taskPerformer).start();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu8 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
         jMenu9 = new javax.swing.JMenu();
         jMenuItem15 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
-        jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem13 = new javax.swing.JMenuItem();
 
@@ -171,7 +178,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.setText("Data Master");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem1.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\patient.png")); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/patient.png"))); // NOI18N
         jMenuItem1.setText("Data Pasien");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,7 +188,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem2.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\doctor2.png")); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/doctor2.png"))); // NOI18N
         jMenuItem2.setText("Data Petugas");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +198,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem3.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\first_aid_kit.png")); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Retort.png"))); // NOI18N
         jMenuItem3.setText("Data Obat");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +208,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem4.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\Folder_Blue_Doc_Icon_16.png")); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Folder_Blue_Doc_Icon_16.png"))); // NOI18N
         jMenuItem4.setText("Data Tindakan");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,7 +219,7 @@ new Timer(1000, taskPerformer).start();
         jMenu1.add(jSeparator1);
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem5.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\Profile2.png")); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Person.png"))); // NOI18N
         jMenuItem5.setText("Administrator");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,7 +233,7 @@ new Timer(1000, taskPerformer).start();
         jMenu8.setText("Pendaftaran ");
 
         jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem6.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\feedback2.png")); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/feedback2.png"))); // NOI18N
         jMenuItem6.setText("Pendaftaran Pemeriksaan");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,12 +242,22 @@ new Timer(1000, taskPerformer).start();
         });
         jMenu8.add(jMenuItem6);
 
+        jMenuItem20.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_INSERT, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Folder_Blue_Doc_Icon_16.png"))); // NOI18N
+        jMenuItem20.setText("Tampilkan Pendaftaran");
+        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem20ActionPerformed(evt);
+            }
+        });
+        jMenu8.add(jMenuItem20);
+
         jMenuBar1.add(jMenu8);
 
         jMenu9.setText("Stok Obat");
 
         jMenuItem15.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
-        jMenuItem15.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\first_aid_kit.png")); // NOI18N
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Retort.png"))); // NOI18N
         jMenuItem15.setText("Stok Obat");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -249,12 +266,22 @@ new Timer(1000, taskPerformer).start();
         });
         jMenu9.add(jMenuItem15);
 
+        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_LEFT, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/feedback2.png"))); // NOI18N
+        jMenuItem9.setText("Pengguna Obat");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu9.add(jMenuItem9);
+
         jMenuBar1.add(jMenu9);
 
         jMenu2.setText("Tindakan");
 
         jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem7.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\Folder_Blue_Doc_Icon_16.png")); // NOI18N
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Text preview.png"))); // NOI18N
         jMenuItem7.setText("Tindakan Pemeriksaan");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,18 +294,8 @@ new Timer(1000, taskPerformer).start();
 
         jMenu4.setText("Cetak Data");
 
-        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem9.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\bubble_jet_printer.png")); // NOI18N
-        jMenuItem9.setText("Cetak Pembayaran");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem9);
-
         jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem10.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\bubble_jet_printer.png")); // NOI18N
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/bubble_jet_printer.png"))); // NOI18N
         jMenuItem10.setText("Cetak Tindakan");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -291,18 +308,8 @@ new Timer(1000, taskPerformer).start();
 
         jMenu5.setText("Laporan");
 
-        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK));
-        jMenuItem11.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\file2.png")); // NOI18N
-        jMenuItem11.setText("Laporan Pembayaran");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem11);
-
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem8.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\file2.png")); // NOI18N
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Print.png"))); // NOI18N
         jMenuItem8.setText("Laporan Pemeriksaan");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,12 +318,22 @@ new Timer(1000, taskPerformer).start();
         });
         jMenu5.add(jMenuItem8);
 
+        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Bookmark.png"))); // NOI18N
+        jMenuItem11.setText("Daftar Pemeriksaan");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem11);
+
         jMenuBar1.add(jMenu5);
 
         jMenu6.setText("About");
 
         jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem12.setIcon(new javax.swing.ImageIcon("D:\\Univ\\Sms_5\\RPL Lanjut\\Poliklinik UIN SGD\\RumahBersalin1\\RumahBersalin\\klinikkebidanan\\src\\klinikkebidanan\\User_group_Icon_16.png")); // NOI18N
+        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/User_group_Icon_16.png"))); // NOI18N
         jMenuItem12.setText("Tentang Programmer");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -326,6 +343,50 @@ new Timer(1000, taskPerformer).start();
         jMenu6.add(jMenuItem12);
 
         jMenuBar1.add(jMenu6);
+
+        jMenu3.setText("Riwayat");
+
+        jMenuItem14.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Profile2.png"))); // NOI18N
+        jMenuItem14.setText("Login Admin");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem14);
+
+        jMenuItem16.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Profile2.png"))); // NOI18N
+        jMenuItem16.setText("Data Admin");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem16);
+
+        jMenuItem17.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Retort.png"))); // NOI18N
+        jMenuItem17.setText("Update Obat");
+        jMenu3.add(jMenuItem17);
+
+        jMenuItem18.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Retort.png"))); // NOI18N
+        jMenuItem18.setText("Hapus Obat");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem18);
+
+        jMenuItem19.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/klinikkebidanan/Male.png"))); // NOI18N
+        jMenuItem19.setText("Hapus Pasien");
+        jMenu3.add(jMenuItem19);
+
+        jMenuBar1.add(jMenu3);
 
         jMenu7.setText("Keluar");
 
@@ -420,10 +481,6 @@ new pendaftaran().setVisible(true);        // TODO add your handling code here:
 new periksa().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-new formcetakbyr().setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
-
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
 new formstokobat().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem15ActionPerformed
@@ -432,13 +489,33 @@ new formstokobat().setVisible(true);        // TODO add your handling code here:
 new ctktin().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-new lapPem().setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
-
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 new formlaptin().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+  new formpenggunaobat().setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        new lappemeriksaan().setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+      new riwayatadmin().setVisible(true);
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        new RiwayatDataAdmin().setVisible(true);
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+ 
+    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+        new tampilPendaftar().setVisible(true);
+    }//GEN-LAST:event_jMenuItem20ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -490,6 +567,7 @@ new formlaptin().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
@@ -502,8 +580,14 @@ new formlaptin().setVisible(true);        // TODO add your handling code here:
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
